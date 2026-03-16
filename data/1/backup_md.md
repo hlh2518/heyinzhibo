@@ -514,12 +514,12 @@
                     ],
                     "download": {
                         "title": "下载地址",
-                        "url": "https://git-proxy.playdreamer.cn/hjdhnx/drpy-node/releases/download/V1.3.24/drpy-node-20260214.7z",
+                        "url": "https://git-proxy.playdreamer.cn/hjdhnx/drpy-node/releases/download/V1.3.29/drpy-node-20260315.7z",
                         "extract_to": "drpy_node",
                         "check_file": "drpy_node/index.js",
                         "size": "25Mb",
                         "mirrors": {
-                            "github": "https://github.com/hjdhnx/drpy-node/releases/download/V1.3.24/drpy-node-20260214.7z"
+                            "github": "https://github.com/hjdhnx/drpy-node/releases/download/V1.3.24/drpy-node-20260315.7z"
                         }
                     }
                 }
