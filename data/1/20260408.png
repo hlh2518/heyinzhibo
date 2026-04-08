@@ -466,8 +466,8 @@
             "downloads": [
                 {
                     "arch": "arm64-v8a",
-                    "url": "https://xget.xi-xu.me/gh/hlh2518/heyinzhibo/releases/download/V26.4.8/heyin_node.7z",  
-                    "liburl": "https://ghfast.top/https://raw.githubusercontent.com/hlh2518/heyinzhibo/refs/heads/main/data/1/heyin_lib.7z",
+                    "url": "https://xget.xi-xu.me/gh/hlh2518/heyinzhibo/releases/download/V26.4.8/heyin_node.zip",  
+                    "liburl": "https://ghfast.top/https://raw.githubusercontent.com/hlh2518/heyinzhibo/refs/heads/main/data/1/heyin_lib.zip",
                     "size": "33.5 MB"
                    
                 }
