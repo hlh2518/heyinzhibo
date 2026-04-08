@@ -16,7 +16,7 @@
           {
             "name": "黄荷爬虫",
             "group": "runtime",
-            "version": "26.3.20",
+            "version": "26.4.8",
             "icon": "https://ghfast.top/https://raw.githubusercontent.com/hlh2518/heyinzhibo/refs/heads/main/data/1/hh.png",
             "auto_install": true,
             "available": true,
@@ -373,12 +373,12 @@
             "name": "荷影API",
             "group": "runtime",
             "cmd_name": "node",
-            "version": "26.3.20",
+            "version": "26.4.8",
             "icon": "https://ghfast.top/https://raw.githubusercontent.com/hlh2518/heyinzhibo/refs/heads/main/data/1/hh.png",
             "auto_install": false,
             "available": true,
             "show": true,
-            "info": "arm架构 很方便的荷影server集成到client by 黄荷 2026年3月8日 三八节,3月16日升级增加酷我音乐和酷狗音乐听书看书...",
+            "info": "arm架构 很方便的荷影server集成到client by 黄荷 2026年4月8日 ,升级增加酷我音乐和酷狗音乐听书看书...",
             "binary_path": "bin/node",
             "var_path": {
                 "LD_LIBRARY_PATH": "lib",
