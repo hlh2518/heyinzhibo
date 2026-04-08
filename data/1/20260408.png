@@ -21,7 +21,7 @@
             "auto_install": true,
             "available": true,
             "show": true,
-            "info": "爬虫运行时，支持多架构，适合低版本安卓和性能较差的设备，此运行时强制静默无感安装。\nsite配置：\n    {\n      \"key\": \"php甜圈短剧\",\n      \"name\": \"php | 甜圈短剧\",\n      \"api\": \"./vod/甜圈短剧.php\",\n      \"type\": \"3\"\n    }",
+            "info": "爬虫运行时，支持多架构，适合低版本安卓和性能较差的设备，此运行时强制静默无感安装。\nsite配置：\n    {黄荷20260408 }",
             "binary_path": "bin/php",
             "var_path": {
                 "LD_LIBRARY_PATH": "bin"
@@ -211,17 +211,8 @@
                         "github": "https://raw.githubusercontent.com/lindaDougherty567/binary/44218a6b0b906494dab4cf2b547e48f9b4d5de8d/files/php_armv8a.zip",
                         "gitlab": "https://gitlab.com/ccfork/binary/-/raw/3ec029a37bc2b9515d245b2500a32867434f7e3a/files/php_armv8a.zip"
                     }
-                },
-                {
-                    "arch": "armeabi-v7a",
-                    "version": "26.3.20",
-                    "url": "https://hhy.sogoucdn.com/wsbff/wsbaike/2025121313/5d66d880-d7e1-11f0-9c92-bb466718b950.jpeg",
-                    "size": "14.8 MB",
-                    "mirrors": {
-                        "github": "https://github.com/example/php/releases/download/php-android-armeabi-v7a.tar.gz",
-                        "gitlab": "https://gitlab.example.com/php/php-android-armeabi-v7a.tar.gz"
-                    }
                 }
+                
             ]
         },      
         
@@ -482,11 +473,8 @@
                     "arch": "arm64-v8a",
                     "url": "https://hhy.sogoucdn.com/wsbff/wsbaike/2025121522/59272e10-d9c5-11f0-a324-93ba524b5e23.jpeg",
                     "liburl": "https://hhy.sogoucdn.com/wsbff/wsbaike/2025121522/5a4b14a0-d9c5-11f0-9c92-bb466718b950.jpeg",
-                    "size": "68.5 MB",
-                    "mirrors": {
-                        "github": "https://raw.githubusercontent.com/lindaDougherty567/binary/65daf34a660d3f36f0744ac8370711155081d8b4/files/nodejs_armv8a.zip",
-                        "gitlab": "https://gitlab.com/ccfork/binary/-/raw/88937096341e6e053fc31c6d78a9d7c625951833/files/nodejs_armv8a.zip"
-                    }
+                    "size": "68.5 MB"
+                   
                 }
             ]
         }
