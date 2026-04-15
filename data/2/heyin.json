@@ -230,46 +230,10 @@
       "https://www.yangshipin.cn/tv/home?pid\u003d600014550"
     ]
   },
-  {
-    "name": "CGTN Español",
-    "group": "国家",
-    "urls": [
-      "https://espanol.cgtn.com/en-directo",
-      "https://www.yangshipin.cn/tv/home?pid\u003d600084744"
-    ]
-  },
-  {
-    "name": "CGTN Français",
-    "group": "国家",
-    "urls": [
-      "https://francais.cgtn.com/channel",
-      "https://www.yangshipin.cn/tv/home?pid\u003d600084704"
-    ]
-  },
-  {
-    "name": "CGTN العربية",
-    "group": "国家",
-    "urls": [
-      "https://arabic.cgtn.com/channel",
-      "https://www.yangshipin.cn/tv/home?pid\u003d600084782"
-    ]
-  },
-  {
-    "name": "CGTN Русский",
-    "group": "国家",
-    "urls": [
-      "https://russian.cgtn.com/channel",
-      "https://www.yangshipin.cn/tv/home?pid\u003d600084758"
-    ]
-  },
-  {
-    "name": "CGTN Documentary",
-    "group": "国家",
-    "urls": [
-      "https://www.cgtn.com/channel/documentary",
-      "https://www.yangshipin.cn/tv/home?pid\u003d600084781"
-    ]
-  },
+ 
+  
+  
+
   {
     "name": "中国气象频道",
     "group": "国家",
@@ -371,13 +335,7 @@
       "https://www.yangshipin.cn/tv/home?pid\u003d600002516"
     ]
   },
-  {
-    "name": "康巴卫视",
-    "group": "HE影直播",
-    "urls": [
-      "https://www.kangbatv.com/zb_22587/"
-    ]
-  },
+  
   {
     "name": "河南卫视",
     "group": "HE影直播",
@@ -441,13 +399,7 @@
       "https://www.sxrtv.com/tv/index.shtml"
     ]
   },
-  {
-    "name": "延边卫视",
-    "group": "HE影直播",
-    "urls": [
-      "https://www.yb983.com/cys/index.html"
-    ]
-  },
+  
   {
     "name": "新疆卫视",
     "group": "HE影直播",
@@ -455,20 +407,8 @@
       "https://www.xjtvs.com.cn/column/tv/434?channelId\u003d1"
     ]
   },
-  {
-    "name": "大湾区卫视",
-    "group": "HE影直播",
-    "urls": [
-      "https://m.gdtv.cn/tvChannelDetail/51"
-    ]
-  },
-  {
-    "name": "大湾区卫视（海外版）",
-    "group": "HE影直播",
-    "urls": [
-      "https://m.gdtv.cn/tvChannelDetail/46"
-    ]
-  },
+  
+  
   {
     "name": "内蒙古卫视",
     "group": "HE影直播",
