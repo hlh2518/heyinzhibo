@@ -1,0 +1,290 @@
+# 荷影+实验室配置
+
+
+```json
+{
+    "version": "26.18",
+    "groups": [
+        {
+            "id": "runtime",
+            "name": "运行环境",
+            "order": 1
+        }
+    ],
+    "lists": [
+        {
+            "name": "黄荷爬虫",
+            "group": "runtime",
+            "version": "26.4.16",
+            "icon": "http://192.168.1.101:2691/file/heyin_server/hh.png",
+            "auto_install": true,
+            "available": true,
+            "show": true,
+            "info": "爬虫运行时，支持多架构，适合低版本安卓和性能较差的设备，此运行时强制静默无感安装。\nsite配置：\n    {黄荷20260416 }",
+            "binary_path": "bin/php",
+            "var_path": {
+                "LD_LIBRARY_PATH": "bin"
+            },
+            "commands": [
+                
+                {
+                    "id": "jixserver",
+                    "name": "黄荷解析",
+                    "description": "解析服务器",
+                    "command": "php -S 0.0.0.0:{port} -t {root_dir} -d ",
+                    "auto_execute": false,
+                    "show_output": true,
+                    "variables": [
+                        {
+                            "key": "port",
+                            "name": "端口号",
+                            "type": "number",
+                            "default": "2696",
+                            "hint": "服务器监听端口",
+                            "required": true,
+                            "min": 1024,
+                            "max": 65535
+                        },
+                        {
+                            "key": "root_dir",
+                            "name": "根目录",
+                            "type": "directory",
+                            "default": "/storage/emulated/0/Huanghe/php",
+                            "hint": "Web 服务器根目录",
+                            "required": true
+                        }
+                    ],
+                    "clicks": [
+                        {
+                            "title": "打开管理",
+                            "action": "open",
+                            "value": "http://127.0.0.1:{port}"
+                        },
+                        {
+                            "title": "复制解析 api配置",
+                            "action": "copy",
+                            "value": "http://127.0.0.1:2696/黄荷"
+                        }
+                    ],
+                    "download": {
+                        "title": "下载地址",
+                        "url": "http://192.168.1.101:2691/file/heyin_server/php.7z",
+                        "extract_to": "php",
+                        "check_file": "php/index.php",
+                        "size": "3.7 MB"
+                    }
+                }
+            ],
+            "downloads": [
+                {
+                    "arch": "arm64-v8a",
+                    "version": "26.4.16",
+                    "url": "http://192.168.1.101:2691/file/heyin_server/heyin_php.7z",
+                    "size": "8.7 MB"
+                }
+            ]
+        },
+        {
+            "name": "python",
+            "group": "runtime",
+            "version": "3.12",
+            "icon": "http://127.0.0.1:2691/file/heyin_server/hh.png",
+            "auto_install": true,
+            "available": true,
+            "show": true,
+            "info": "Python静态编译版本，适用于Android ARM架构",
+            "binary_path": "bin/python3",
+            "var_path": {
+                "PATH": "bin",
+                "LD_LIBRARY_PATH": "lib",
+                "PYTHONHOME": ".",
+                "PYTHONPATH": "lib/python3.12/site-packages"
+            },
+            "commands": [
+                {
+                    "auto_execute": false,
+                    "background": false,
+                    "command": "python3 --version",
+                    "description": "显示 Python 版本信息",
+                    "id": "version",
+                    "name": "查看版本",
+                    "show_output": true
+                },
+                {
+                    "auto_execute": false,
+                    "background": false,
+                    "command": "python3 -m pip list",
+                    "description": "列出已安装的第三方模块",
+                    "id": "pip_list",
+                    "name": "查看模块",
+                    "show_output": true
+                },
+                {
+                    "auto_execute": false,
+                    "background": true,
+                    "command": "python3 -m http.server {port} --directory {root_dir}",
+                    "description": "启动一个临时的 HTTP 文件服务器",
+                    "id": "http_server",
+                    "name": "HTTP 文件服务器",
+                    "show_output": true,
+                    "variables": [
+                        {
+                            "default": "8080",
+                            "hint": "HTTP 服务器监听端口",
+                            "key": "port",
+                            "max": 65535,
+                            "min": 1024,
+                            "name": "端口号",
+                            "required": true,
+                            "type": "number"
+                        },
+                        {
+                            "default": "/storage/emulated/0/",
+                            "hint": "要共享的根目录",
+                            "key": "root_dir",
+                            "name": "根目录",
+                            "required": true,
+                            "type": "directory"
+                        }
+                    ]
+                }
+            ],
+            "downloads": [
+                {
+                    "arch": "arm64-v8a",
+                    "url": "http://192.168.1.101:2691/file/heyin_server/heyin_python.7z",
+                    "size": "12.1 MB",
+                    "version": "3.12"
+                }
+            ]
+        },
+        {
+            "name": "荷影API",
+            "group": "runtime",
+            "cmd_name": "node",
+            "version": "26.4.16",
+            "icon": "http://127.0.0.1:2691/file/heyin_server/hh.png",
+            "auto_install": true,
+            "available": true,
+            "show": true,
+            "info": "arm架构 很方便的荷影server集成到client by 黄荷 2026年4月 16 日 ,升级增加酷我音乐和酷狗音乐听书看书...",
+            "binary_path": "bin/node",
+            "var_path": {
+                "LD_LIBRARY_PATH": "lib",
+                "OPENSSL_CONF": "/dev/null",
+                "NODE_PATH": "lib/node_modules"
+            },
+            "commands": [
+                {
+                    "id": "version",
+                    "name": "查看版本",
+                    "description": "显示 Node.js 版本信息",
+                    "command": "node -v",
+                    "auto_execute": false,
+                    "show_output": true
+                },
+                {
+                    "id": "list_modules",
+                    "name": "查看模块",
+                    "description": "列出已安装的 Node.js 模块",
+                    "command": "node -e \"require('fs').readdirSync('{envRootPath}/lib/node_modules').forEach(m => console.log(m))\"",
+                    "auto_execute": false,
+                    "show_output": true
+                },
+                {
+                    "id": "run_script",
+                    "name": "运行脚本",
+                    "description": "执行指定的 JavaScript 脚本",
+                    "command": "node {script_path}",
+                    "auto_execute": false,
+                    "show_output": true,
+                    "variables": [
+                        {
+                            "key": "script_path",
+                            "name": "脚本路径",
+                            "type": "file",
+                            "default": "",
+                            "hint": "选择要执行的 JS 脚本",
+                            "required": true,
+                            "filter": "*.js"
+                        }
+                    ]
+                },
+                {
+                    "id": "tts",
+                    "name": "黄荷语音",
+                    "description": "启动黄荷语音",
+                    "command": "node /storage/emulated/0/Huanghe/TTSServer.js ",
+                    "auto_execute": true,
+                    "show_output": true,
+                    "clicks": [
+                        {
+                            "title": "复制语音api配置到朗读设置地址黏贴",
+                            "action": "copy",
+                            "value": "http://127.0.0.1:3000"
+                        }
+                    ]
+                },
+                {
+                    "id": "migujs",
+                    "name": "荷影直播",
+                    "description": "运行后复制配置到设置点播中粘贴即可",
+                    "command": "node /storage/emulated/0/Huanghe/heyin/zhibo/index.js",
+                    "auto_execute": true,
+                    "show_output": true,
+                    "min_version": 110,
+                    "clicks": [
+                        {
+                            "title": "打开管理",
+                            "action": "open",
+                            "value": "http://127.0.0.1:2699/admin.html"
+                        },
+                        {
+                            "title": "复制直播api配置",
+                            "action": "copy",
+                            "value": "http://127.0.0.1:2699/m3u"
+                        }
+                    ]
+                    
+                },
+                {
+                    "id": "heyin",
+                    "name": "荷影点播",
+                    "description": "运行后复制配置到设置点播中粘贴即可",
+                    "command": "node /storage/emulated/0/Huanghe/heyin/index.js",
+                    "auto_execute": true,
+                    "show_output": true,
+                    "min_version": 110,
+                    "clicks": [
+                        {
+                            "title": "复制点播api配置",
+                            "action": "copy",
+                            "value": "http://127.0.0.1:25181/config/1?pwd=22659118@Heyin"
+                        },
+                        {
+                            "title": "复制直播api配置1",
+                            "action": "copy",
+                            "value": "http://127.0.0.1:2691/Huanghe/heyin/zhibo/live.png"
+                        }
+                    ],
+                    "download": {
+                        "title": "下载地址",
+                        "url": "http://192.168.1.101:2691/file/heyin_server/heyin.7z",
+                        "extract_to": "heyin",
+                        "check_file": "heyin/index.js",
+                        "size": "22Mb"
+                    }
+                }
+            ],
+            "downloads": [
+                {
+                    "arch": "arm64-v8a",
+                    "url": "http://192.168.1.101:2691/file/heyin_server/heyin_node.zip",
+                    "liburl": "http://192.168.1.101:2691/file/heyin_server/heyin_lib.zip",
+                    "size": "33.0 MB"
+                }
+            ]
+        }
+    ]
+}
+```
